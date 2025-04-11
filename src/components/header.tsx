@@ -3,6 +3,7 @@ import { Search } from 'lucide-react'
 import Image from 'next/image'
 import { CardWidget } from './card-widget'
 import { SearchForm } from './search-form'
+import { Suspense } from 'react'
 
 export function Header() {
   return (
@@ -12,7 +13,9 @@ export function Header() {
           devstore
         </Link>
 
-        <SearchForm />
+        <Suspense>
+          <SearchForm />
+        </Suspense>
       </div>
       <div className="flex items-center gap-4">
         <CardWidget />
