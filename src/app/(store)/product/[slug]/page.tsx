@@ -1,4 +1,5 @@
 import { AddToCartButton } from '@/components/add-to-cart-button'
+import { SizeButton, SizeSelector } from '@/components/size-button'
 import { api } from '@/data/api'
 import { Product } from '@/data/types/product'
 import { Metadata } from 'next'
@@ -84,30 +85,7 @@ export default async function ProductPage({ params }: ProductProps) {
           <span className="block font-semibold">Tamanhos</span>
 
           <div className="flex gap-2">
-            <button
-              type="button"
-              className="flex h-9 w-14 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800 text-sm font-semibold"
-            >
-              P
-            </button>
-            <button
-              type="button"
-              className="flex h-9 w-14 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800 text-sm font-semibold"
-            >
-              M
-            </button>
-            <button
-              type="button"
-              className="flex h-9 w-14 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800 text-sm font-semibold"
-            >
-              G
-            </button>
-            <button
-              type="button"
-              className="flex h-9 w-14 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800 text-sm font-semibold"
-            >
-              GG
-            </button>
+            <SizeSelector />
           </div>
         </div>
 
