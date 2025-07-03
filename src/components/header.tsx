@@ -7,8 +7,8 @@ import { Suspense } from 'react'
 
 export function Header() {
   return (
-    <div className="flex items-center justify-between">
-      <div className="flex items-center gap-5">
+    <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+      <div className="flex items-center gap-5  justify-between md:justify-normal w-[100%] md:w-auto">
         <Link href="/" className="text-2xl font-extrabold text-white">
           devstore
         </Link>
@@ -17,7 +17,7 @@ export function Header() {
           <SearchForm />
         </Suspense>
       </div>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 whitespace-nowrap">
         <CardWidget />
 
         <div className="w-px h-4 bg-zinc-700" />
